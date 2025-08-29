@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         second: '2-digit',
         hour12: true,
       })
-      .replace(',', '');
+      .replace(',', '')
+      .replace(/\b(am|pm)\b/, (m) => m.toUpperCase());
   }
 
   // add history
@@ -44,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const left = document.createElement('div');
 
     const service = document.createElement('p');
-    service.className = 'text-sm font-medium';
+    service.className = 'text-base font-inter';
     service.textContent = name;
 
     const num = document.createElement('p');
-    num.className = 'text-xs text-gray-500';
+    num.className = 'text-xs text-gray-500 font-inter';
     num.textContent = number;
 
     left.appendChild(service);
@@ -94,11 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.querySelector('.number')?.textContent.trim() || 'N/A';
 
         if (coins < 20) {
-          alert(
-            `Not enough coins — ${coins} coin${
-              coins === 1 ? '' : 's'
-            } left, one call costs 20 coins`
-          );
+          alert(`Not enough coins — ${coins} left (1 call = 20 coins)`);
           return;
         }
 
