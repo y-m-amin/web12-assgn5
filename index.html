@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      body {
+        font-family: 'Hind Madurai', sans-serif;
+      }
+    </style>
   </head>
   <body class="min-h-screen bg-gray-100 text-gray-900">
     <!-- ================= NAVBAR (90%) ================= -->
@@ -27,18 +32,24 @@
             <img
               src="./assets/logo.png"
               alt="Logo"
-              class="h-[50px] w-[50px] object-contain"
+              class="h-[52px] w-[52px] object-contain"
             />
             <div class="leading-tight text-left text-green-800">
-              <span class="block text-2xl font-bold">Emergency</span>
-              <span class="block text-2xl font-bold">Services</span>
+              <span class="block font-hind text-3xl font-extrabold"
+                >Emergency</span
+              >
+              <span class="block font-hind text-3xl font-extrabold"
+                >Services</span
+              >
             </div>
           </div>
           <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
             <div
               class="inline-flex items-center gap-2 bg-green-100 rounded-3xl px-6 py-3"
             >
-              <span class="text-sm font-semibold leading-none heartcnt">0</span>
+              <span class="text-sm font-inter font-bold leading-none heartcnt"
+                >0</span
+              >
               <img
                 src="./assets/heart.png"
                 alt="Heart"
@@ -48,7 +59,7 @@
             <div
               class="inline-flex items-center gap-2 bg-green-100 rounded-3xl px-6 py-3"
             >
-              <span class="text-sm font-semibold leading-none coincnt"
+              <span class="text-sm font-inter font-bold leading-none coincnt"
                 >100</span
               >
               <img
@@ -58,10 +69,10 @@
               />
             </div>
             <div
-              class="inline-flex items-center gap-2 bg-green-400 rounded-3xl px-6 py-3"
+              class="inline-flex items-center gap-2 bg-green-600 rounded-3xl px-6 py-3"
             >
-              <span class="text-sm font-medium leading-none copycnt"
-                >0 copy</span
+              <span class="text-sm font-medium text-white leading-none copycnt"
+                >0 Copy</span
               >
             </div>
           </div>
@@ -81,10 +92,10 @@
             class="h-20 w-20 md:h-24 md:w-24 object-contain"
             loading="lazy"
           />
-          <h1 class="mt-4 text-2xl md:text-3xl font-bold">
+          <h1 class="mt-4 font-hind text-2xl md:text-3xl font-bold">
             Emergency Service Directory
           </h1>
-          <p class="mt-2 max-w-4xl text-sm md:text-base opacity-90">
+          <p class="mt-2 max-w-4xl font-hind text-sm md:text-base opacity-90">
             Government Emergency Services at Your Fingertip – A Project by
             Government of the People’s Republic of Bangladesh
           </p>
@@ -95,11 +106,17 @@
     <!-- ================= MAIN ================= -->
     <section class="w-full">
       <div class="w-[90%] mx-auto py-6">
-        <div
-          class="flex flex-col-reverse gap-4 lg:grid lg:grid-cols-[436px_436px_436px_400px] lg:grid-rows-[repeat(3,360px)] lg:gap-4"
+        <!-- <div
+          class="flex flex-col-reverse sm:flex-col-reverse md:flex-col-reverse gap-4 lg:grid lg:grid-cols-[436px_436px_436px_400px] lg:grid-rows-[repeat(2,360px)] xl:grid-rows-[repeat(3,360px)] lg:gap-4"
         >
           <div
-            class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:col-span-3 lg:col-span-3"
+            class="grid gap-4 sm:grid-cols-2 sm:col-span-1 md:grid-cols-2 md:col-span-2 lg:grid-cols-3 lg:col-span-3 xl:grid-cols-3 xl:col-span-3"
+          > -->
+        <div
+          class="flex flex-col-reverse gap-4 lg:grid lg:grid-cols-[1fr_1fr_400px] xl:grid-cols-[1fr_1fr_1fr_400px] 2xl:grid-cols-[1fr_1fr_1fr_400px]"
+        >
+          <div
+            class="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:col-span-2 xl:grid-cols-3 xl:col-span-3 2xl:grid-cols-3 2xl:col-span-3"
           >
             <!-- Card 1 -->
             <article
@@ -734,7 +751,7 @@
                 <h2 class="text-lg font-semibold">Call History</h2>
               </div>
               <button
-                class="clrhist px-7 py-2 rounded-full bg-green-500 text-white text-base hover:bg-green-600"
+                class="clrhist px-7 py-2 rounded-full font-bold bg-green-600 text-white text-base hover:bg-green-600"
               >
                 Clear
               </button>
